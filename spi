@@ -133,7 +133,7 @@ fed() {
 		32)
 			wget -O /etc/squid/squid.conf https://raw.githubusercontent.com/hidden-refuge/squid-proxy-installer/master/spi-fedora32.conf --no-check-certificate;;
 		64)
-			wget -O /etc/squid/squid.conf https://raw.githubusercontent.com/hidden-refuge/squid-proxy-installer/master/spi-rhel7.conf --no-check-certificate;;
+			wget -O /etc/squid/squid.conf https://raw.githubusercontent.com/centminmod/squid-proxy-installer/master/spi-rhel7.conf --no-check-certificate;;
 	esac
 	systemctl restart squid && systemctl enable squid
 	iptables -A INPUT -p tcp --dport 3128 -j ACCEPT
